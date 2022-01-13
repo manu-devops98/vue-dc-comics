@@ -48,9 +48,6 @@
           </div>
 
           </div>
-          <div class="col-right">
-              <img src="../assets/img/dc-logo-bg.png" alt="">
-          </div>
 
         </div>
     </div>
@@ -85,7 +82,10 @@ export default {
     position: relative;
     .container-80 {
         display: flex;
-        justify-content: space-between;
+        background-image: url(../assets/img/dc-logo-bg.png);
+        background-repeat: no-repeat;
+        background-position-x: 90%;
+        background-position-y: 50%;
         padding: 2em;
         .col-left {
             display: flex;
@@ -114,15 +114,6 @@ export default {
                     }
                 }
             }
-        }
-        .col-right {
-            text-align: center;
-            // position: absolute;
-            // top: -90px;
-            // right: 180px;
-            img {
-               width: 60%;
-           }
         }
     }     
 }
