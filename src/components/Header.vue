@@ -29,10 +29,8 @@ export default {
 
     header {
         .container-80 {
-            // background-color: red;
             justify-content: space-between;
             align-items: center;
-            padding: 1em;
             img {
                 width: 70px;
             }
@@ -44,7 +42,7 @@ export default {
                      text-decoration: none;
                      color: black;
                      display: block;
-                     padding: 2em 0.5em;
+                     padding: 3em 0.5em;
                      &:hover {
                         color: #0082F9;
                      }
