@@ -2,6 +2,7 @@
 <footer>
     <div class="footer-top">
       <div class="container-80">
+          <div class="col-left">
           <div class="col">
               <h3>DC COMICS</h3>
               <ul>
@@ -45,6 +46,8 @@
                   <li><a href="">DC Power Visa</a></li>
               </ul>
           </div>
+
+          </div>
           <div class="col-right">
               <img src="../assets/img/dc-logo-bg.png" alt="">
           </div>
@@ -80,35 +83,46 @@ export default {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     position: relative;
-    z-index: -2;
     .container-80 {
         display: flex;
+        justify-content: space-between;
         padding: 2em;
-        .col {
-            margin: 0 2em 0 0;
-        }
-        .col h3 {
-                color: white;
-                margin-bottom: 0.5em;
+        .col-left {
+            display: flex;
+            .col {
+                margin: 0 2em 0 0;
             }
-            
-        .col ul {
-            list-style: none;
-            li {
-                margin-bottom: 0.3em;
-                a {
-                    color: #797979;
-                    text-decoration: none;
-                    font-size: 0.8em;
+            .col h3 {
+                    color: white;
+                    margin-bottom: 0.5em;
                 }
-          }
+                
+            .col ul {
+                list-style: none;
+                li {
+                    margin-bottom: 0.3em;
+                    a {
+                        color: #797979;
+                        text-decoration: none;
+                        font-size: 0.8em;
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: underline;
+                            color: white;
+                            z-index: 3;
+                        }
+                    }
+                }
+            }
         }
-        .col-right img {
-            width: 37%;
-            position: absolute;
-            top: -90px;
-            right: 180px;
-            z-index: -1;
+        .col-right {
+            text-align: center;
+            // position: absolute;
+            // top: -90px;
+            // right: 180px;
+            img {
+               width: 60%;
+           }
         }
     }     
 }
@@ -116,7 +130,8 @@ export default {
 .footer-bottom {
     background-color: #30302F;
     height: 100px;
-   display: flex;
+    display: flex;
+    z-index: 2;
    .container-80 {
        display: flex;
        align-items: center;
