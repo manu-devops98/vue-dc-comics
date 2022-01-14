@@ -9,30 +9,17 @@
         :alt="card.series"
         :titolo="card.series"
       />
-      <!-- contenitore icone azzurre  -->
     </div>
+    <!-- contenitore icone azzurre  -->
     <div class="container-icons">
       <div class="container-80">
-        <div class="box">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="" />
-          <h3>DIGITAL COMICS</h3>
-        </div>
-        <div class="box">
-          <img src="../assets/img/buy-comics-merchandise.png" alt="" />
-          <h3>DC MERCHANDISE</h3>
-        </div>
-        <div class="box">
-          <img src="../assets/img/buy-comics-subscriptions.png" alt="" />
-          <h3>SUBSCRIPTION</h3>
-        </div>
-        <div class="box">
-          <img src="../assets/img/buy-comics-shop-locator.png" alt="" />
-          <h3>COMIC SHOP LOCATOR</h3>
-        </div>
-        <div class="box">
-          <img src="../assets/img/buy-dc-power-visa.svg" alt="" />
-          <h3>DC POWERVISA</h3>
-        </div>
+        <BlueIcons
+          :key="index"
+          v-for="(icon, index) in blueIcon"
+          :img="icon.icon"
+          :alt="icon.title"
+          :titolo="icon.title"
+        />
       </div>
     </div>
   </main>
@@ -40,10 +27,12 @@
 
 <script>
 import Cards from "./Cards.vue";
+import BlueIcons from "./BlueIcons.vue";
 export default {
   name: "Main",
   components: {
     Cards,
+    BlueIcons,
   },
   data() {
     return {
@@ -133,6 +122,28 @@ export default {
           type: "graphic novel",
         },
       ],
+      blueIcon: [
+        {
+          icon: require("../assets/img/buy-comics-digital-comics.png"),
+          title: "digital comics",
+        },
+        {
+          icon: require("../assets/img/buy-comics-merchandise.png"),
+          title: "dc merchandise",
+        },
+        {
+          icon: require("../assets/img/buy-comics-subscriptions.png"),
+          title: "subscriptions",
+        },
+        {
+          icon: require("../assets/img/buy-comics-shop-locator.png"),
+          title: "comic shop locator",
+        },
+        {
+          icon: require("../assets/img/buy-dc-power-visa.svg"),
+          title: "dc powervisa",
+        },
+      ],
     };
   },
 };
@@ -162,20 +173,20 @@ main {
     .container-80 {
       display: flex;
       padding: 2em;
-      .box {
-        display: flex;
-        align-items: center;
-        width: calc(100% / 5);
-        margin-left: 3em;
-        cursor: pointer;
-        img {
-          width: 20%;
-        }
-        h3 {
-          font-size: 0.8em;
-          margin-left: 1em;
-        }
-      }
+      //   .box {
+      //     display: flex;
+      //     align-items: center;
+      //     width: calc(100% / 5);
+      //     margin-left: 3em;
+      //     cursor: pointer;
+      //     img {
+      //       width: 20%;
+      //     }
+      //     h3 {
+      //       font-size: 0.8em;
+      //       margin-left: 1em;
+      //     }
+      //   }
     }
   }
 }
