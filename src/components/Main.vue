@@ -173,20 +173,6 @@ main {
     .container-80 {
       display: flex;
       padding: 2em;
-      //   .box {
-      //     display: flex;
-      //     align-items: center;
-      //     width: calc(100% / 5);
-      //     margin-left: 3em;
-      //     cursor: pointer;
-      //     img {
-      //       width: 20%;
-      //     }
-      //     h3 {
-      //       font-size: 0.8em;
-      //       margin-left: 1em;
-      //     }
-      //   }
     }
   }
 }
