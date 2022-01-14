@@ -32,6 +32,7 @@ header {
   left: 0;
   width: 100%;
   height: 120px;
+  z-index: 9999;
   background-color: white;
   .container-80 {
     justify-content: space-between;
