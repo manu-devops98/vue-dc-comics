@@ -50,7 +50,7 @@ header {
           display: block;
           padding: 3em 0.5em;
           border-bottom: 4px solid transparent;
-          transition: 0.9s;
+          transition: 0.6s;
           &:hover {
             color: #0082f9;
             border-bottom: 4px solid #0082f9;
@@ -63,11 +63,5 @@ header {
       }
     }
   }
-  // .jumbotron-bg {
-  //   background-image: url("../assets/img/jumbotron.jpg");
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   height: 300px;
-  // }
 }
 </style>
